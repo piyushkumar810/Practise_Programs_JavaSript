@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">CLICK Me</button>
+
+    <script>
+
+        const butnn= document.getElementById("btn")
+
+        // for(let i=0; i<5; i++)
+        // {
+        //     butnn.addEventListener("click", function(){
+        //         console.log(`button clicked ${i}`);
+        //     });
+        // }
+
+        // question is kitne baar button clicked dekhne ko milega
+
+        // -----------output ek baar button click karne per 5 baar button clicked dekhne ko milega
+        // button clicked 0
+        // button clicked 1
+        // button clicked 2
+        // button clicked 3
+        // button clicked 4
+
+
+        // ------------------------to solve this problem use onclick
+
+        for(let i=0; i<5; i++)
+        {
+            butnn.onclick = function(){
+                console.log(`button clicked ${i}`);
+            };
+            // console.log(i);
+        }
+
+        // output = button clicked 4
+
+    </script>
+</body>
+</html>
