@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <style>
+        .abc{
+            background: crimson;
+        }
+        .xyz{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="header" class="abc">
+        <h1>Yahoo Baba</h1>
+    </div>
+
+    <script>
+        document.querySelector('#header').addEventListener("click", abc);
+
+        function abc(){
+            // adding class
+            // document.querySelector('#header').classList.add("xyz","pqr");
+
+            // removing class
+            document.querySelector('#header').remove("xyz");
+        
+            // to check numberr of classes used 
+            var a=document.querySelector('#header').classList;
+            console.log(a);
+
+            // removing class
+            document.querySelector('#header').remove("pqr");
+        }
+    </script>
+</body>
+</html>
