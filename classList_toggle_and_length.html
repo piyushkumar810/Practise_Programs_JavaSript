@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <style>
+        .abc{
+            background: crimson;
+        }
+        .xyz{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="header" class="abc xyz pqr"> work with javaScript length property -->
+        <div id="header" class="abc">
+            <h1>Yahoo Baba</h1>
+        </div>
+
+    <script>
+        document.querySelector('#header').addEventListener("click", abc);
+
+        function abc()
+        {
+            // to know how many classes are used in that tag
+            // var a=document.querySelector('#header').classList.length;
+            // console.log(a);
+
+            // toggle - it works just like on/off (jab single click kare woo chije on ho jay or )
+            document.querySelector('#header').classList.toggle("xyz")
+        }
+    </script>
+</body>
+</html>
