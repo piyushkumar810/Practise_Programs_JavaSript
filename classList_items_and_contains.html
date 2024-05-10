@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <style>
+        .abc{
+            background: crimson;
+        }
+        .xyz{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="header" class="abc xyz pqr">
+            <h1>Yahoo Baba</h1>
+        </div>
+
+    <script>
+        document.querySelector('#header').addEventListener("click", abc);
+
+        function abc()
+        {
+            // item property
+            var a=document.querySelector('#header').classList.item(1);
+            console.log(a);
+
+            // contains
+            var a=document.querySelector('#header').classList.contains("xyz")
+            console.log(a);
+
+        }
+    </script>
+</body>
+</html>
