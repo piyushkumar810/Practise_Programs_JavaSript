@@ -1,0 +1,38 @@
+<!--  -----------------------------topic covered
+
+ event bubbling & capturing
+ stop propogation , immediate propagation and prevent default -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- html -->
+    <div>
+        <button>Like me</button>
+    </div>
+
+    <!-- this is the concept of event bubbling (child to parent means->  jo v appka button hai jaha se eveent suru hua uske parent tak jayega,
+         here example:- assuume button is treated ad child event or isske parent div,body, html ye sab per event add kar ke us button ko access kar sakte hai )  -->
+
+    <!-- javascript  -->
+    <script>
+        var div=document.querySelector("div");
+        var button=document.querySelector("button");
+
+        div.addEventListener("click",()=>{
+            console.log(div);
+        })
+
+        button.addEventListener("click",(event)=>{
+            event.stopPropagation();
+            // stop propagation will stop the behaviour of child to parent
+            console.log(button);
+        })
+    </script>
+</body>
+</html>
