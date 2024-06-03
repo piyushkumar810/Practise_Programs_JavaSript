@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const datas=[
+    {name:"piyush", profession:"frontend Developer"},
+    {name:"sikendra", prfession:"designer and testing"}
+]
+
+function getdatas(){
+    setTimeout(() => {
+        let output="";
+        datas.forEach((data,index)=>{
+            output +=`<li> ${data.name} </li>`;
+        })
+
+        document.body.innerHTML=output;
+    }, 1000);
+}
+
+function createdata(newdata,callback){
+    setTimeout(() => {
+        datas.push(newdata);
+        callback();
+    }, 2000);
+}
+
+// getdatas();
+createdata({name:"suraj", prfession:"backand developer"}, getdatas)
+    </script>
+</body>
+</html>
