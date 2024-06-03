@@ -1,0 +1,25 @@
+<!-- prevent Default -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="home.html"> Home 💕 </a>
+    <!-- anchor tag byDefault behaviour is to go to the next page  -->
+    <!-- preventDefault is used to stop doing byDefault behaviour -->
+    <script>
+        var anchor=document.querySelector("a");
+
+        anchor.addEventListener("click", (event)=>{   
+            event.preventDefault();
+            console.log(anchor);
+        })
+        
+    </script>
+</body>
+</html>
